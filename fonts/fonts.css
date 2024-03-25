@@ -1,1 +1,35 @@
 /* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
+@font-face {
+    font-family: "PressStart2P";
+    src: url(./PressStart2P-Regular.woff) format('woff');
+    font-weight: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Inter-Variable";
+    src: 
+    url(./Inter-Variable.woff2) format("woff2 supports variations"),
+    url(./Inter-Variable.woff2) format("woff2-variations");
+    font-weight: [400] [785];
+    font-weight: normal;
+    font-display: swap;
+  }
+  
+
+  * Стили для текстового элемента */
+.label {
+  position: absolute;
+  bottom: 10px; /* Располагаем текст внизу контейнера */
+  left: 10px; /* и слева */
+  padding: 5px;
+  color: var(--text-outline-color); /* Используем переменную для цвета обводки текста */
+  mix-blend-mode: hard-light; /* Применяем режим смешивания hard-light */
+}
+
+/* Проверяем поддержку режима смешивания и устанавливаем фоллбэк на text-shadow */
+@supports (mix-blend-mode: hard-light) {
+  .label {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Фоллбэк на text-shadow */
+  }
+}
