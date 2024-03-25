@@ -35,23 +35,29 @@
     --accent-font-weight: 785;
     --main-text-color:#00CC14;
     --background-color: #000000;
-    --background-gradient: repeating-linear-gradient(to right, #007f0c 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #007f0c 0px 2px, transparent 2px 4px);
-    --background-gradient-deep-color: linear-gradient(to bottom, #007f0c 0%, #004306 100%);
+    --background-gradient: 
+    repeating-linear-gradient(to right, #000 0px 2px, transparent 2px 4px), 
+    repeating-linear-gradient(to bottom, #000 0px 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c 0%, #004306 100%);
     --section-background: black;
     --border: #00CC14;
     --label-text-border: rgba(0, 0, 0, 0.5);
-
     --label-text-color: rgb(0, 204, 20, 0.5);
+
+    --header-button-disabled: rgba(0, 204, 20, 0.6);
 }
 
 :root.theme-light {
     --main-text-color: #000000;
     --background-color: #ffffff;
-    --background-gradient: repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px);
-    --background-gradient-deep-color: linear-gradient(to bottom, #e7e7e7 0.01%%, #1a1a1a 100%);
-  --section-background: white;
+    --background-gradient: 
+    repeating-linear-gradient(to right, #d3d3d3 0px 2px, transparent 2px 4px), 
+    repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px), 
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
+   --section-background: white;
   --border: black;
   --label-text-border: rgba(255, 255, 255, 0.5);
   --label-text-color: rgb(0, 204, 20, 0.5);
   --label-text-color:  rgba(0, 0, 0, 0.5);
+  --header-button-disabled: rgba(0, 0, 0, 0.6);
 }
