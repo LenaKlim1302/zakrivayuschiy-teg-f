@@ -43,8 +43,10 @@
     --border: #00CC14;
     --label-text-border: rgba(0, 0, 0, 0.5);
     --label-text-color: rgb(0, 204, 20, 0.5);
-
     --header-button-disabled: rgba(0, 204, 20, 0.6);
+    --like-hover: #00CC14;
+
+    --contour-color: #00CC14;
 }
 
 :root.theme-light {
@@ -60,4 +62,7 @@
   --label-text-color: rgb(0, 204, 20, 0.5);
   --label-text-color:  rgba(0, 0, 0, 0.5);
   --header-button-disabled: rgba(0, 0, 0, 0.6);
+  --like-hover: #fff;
+
+  --contour-color: #000000;
 }
