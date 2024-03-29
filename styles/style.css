@@ -135,7 +135,6 @@ header {
     animation: triangleAnimation 0.5s ease-in-out infinite alternate;
 }
 
-
 /*форма подчеркивания*/
 .button-underline::after {
     content: "";
@@ -155,8 +154,7 @@ header {
 /*цвет текста */
 .theme-menu__button:hover {
     color: var(--header-button-disabled);
-    transition: color 0.3s;
-    transition: 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 /*сбросить стили*/
@@ -466,11 +464,9 @@ header {
 
 footer {
     display: flex;
-
-    background-color: var(--background-color);
     margin-block-start: 0;
     width: clamp(var(--min-header-width), 100%, var(--max-header-width));
-    height: 160px; 
+    height: 160px;
     justify-content: center;
     align-items: center;
 }
@@ -479,13 +475,10 @@ footer {
     position: relative;
     display: flex;
     align-items: center;
-
     min-height: 55px;
-
     width: 338px;
-
     border: 2px solid var(--border);
-    background-color: transparent;
+    background-color: var(--background-color);
 }
 
 @media (max-width: 376px) {
@@ -532,17 +525,24 @@ footer {
 }
 
 .custom-dialog[open] {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-flow: row;
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
     min-height: 191px;
     max-width: 357px;
     min-width: 341px;
-    row-gap: 20px;
-    justify-items: center;
+    border: 2px solid var(--border);
+}
 
-    justify-content: center;
+.form-dialog {
+    display: grid;
+    background-color: var(--background-color);
+    color: var(--main-text-color);
+    grid-template-columns: auto auto;
+    grid-auto-flow: row;
+    row-gap: 20px;
     align-content: center;
+    justify-items: center;
 }
 
 .icon-title-dialog {
