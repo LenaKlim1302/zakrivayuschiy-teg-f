@@ -66,6 +66,8 @@
 }
 
 :root.theme-light {
+    --main-font-weight: 400;
+    --accent-font-weight: 785;
     --main-text-color: #000000;
     --background-color: #ffffff;
     --background-gradient: 
@@ -79,6 +81,6 @@
   --label-text-color:  rgba(0, 0, 0, 0.5);
   --header-button-disabled: rgba(0, 0, 0, 0.6);
   --like-hover: #fff;
-  --main-font-weight: 400;
+
   --contour-color: #000000;
 }

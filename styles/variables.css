@@ -2,7 +2,7 @@
 
 :root {
     /*шрифты*/
-    --main-font: 'Inter', sans-serif, Roboto;
+    --main-font: 'Inter-Variable', sans-serif, Roboto;
     --main-font-weight: 400;
     --accent-font: 'PressStart2P', sans-serif, Roboto;
     --accent-font-weight: 700;
