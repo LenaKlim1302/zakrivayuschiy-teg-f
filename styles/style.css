@@ -227,6 +227,12 @@ padding: 0;
   background-color: var(--section-background);
 }
 
+@media (max-width: 376px){
+  .card-item {
+    max-width: 375px;
+  }
+}
+
 .section-title {
   display: flex;
   width: 100%;
@@ -249,9 +255,10 @@ padding: 0;
 .picture-label {
   position: relative;
   display: inline-block;
-  height: 100%;
+height: clamp(372px, 100%, 700px);
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
 
-  /* color: var(--label-text-color); */
 }
 
 
@@ -284,9 +291,46 @@ padding: 0;
   }
 }
 
-.truck-picture {
+.picture {
   width: 100%;
+max-height: 696px;
 }
+
+.picture-roots {
+filter: blur(2px);
+}
+
+.picture-bridge {
+  filter: sepia(15%);
+}
+
+.picture-kolombo {
+
+  
+  filter: opacity(0.5);
+}
+
+.picture-stars {
+  filter: saturate(200%);
+}
+
+.picture-moon {
+  filter: grayscale(.75);
+}
+
+.picture-base {
+  filter: hue-rotate(170deg);
+}
+
+.picture-room {
+  filter: invert(60%);
+}
+
+.picture-sunset {
+  filter: blur(1px) saturate(200%);
+}
+
+
 
 .section-text {
   font-family: var(--main-font);
@@ -295,12 +339,7 @@ padding: 0;
   padding: 25px 25px 0 25px;
   width: 100%;
 }
-/*
-@media (max-width: 376px) {
-  .section-text {
-    width: 100%;
-  }
-}*/
+
 
 .card__icon-button {
   display: flex;
