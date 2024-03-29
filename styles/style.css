@@ -13,25 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-@keyframes triangleAnimation {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(4px);
-  }
-}
-
-@keyframes sparksAppearanceAnimation {
-  0%,
-  100% {
-      opacity: 0;
-  }
-  50% {
-      opacity: 1;
-  }
-}
-
 body,
 html {
   display: flex;
@@ -39,16 +20,12 @@ html {
   justify-content: center;
 }
 
-/*
-.custom-dialog::backdrop {
-background-color: rgba(0, 0, 0, 0.5);
-}*/
 
 .page {
   display: flex;
   flex-direction: column;
   font-family: var(--main-font);
-  font-variation-settings: var(--main-font-weight); /*вес шрифта*/
+  font-variation-settings: var(--main-font-weight);
   background-color: var(--background-color);
   color: var(--main-text-color);
   background-image: var(--background-gradient);
@@ -265,9 +242,8 @@ height: clamp(372px, 100%, 700px);
 
 .picture-decoration {
   position: absolute;
-  top: 7%;
-  left: 84%;
-  transform: translate(-50%, -50%);
+  right: 25px;
+  top: 25px;
   font-family: var(--accent-font);
   line-height: 1;
   color: var(--label-text-color);
@@ -664,4 +640,3 @@ margin: 0;
 }
 
 
-.
