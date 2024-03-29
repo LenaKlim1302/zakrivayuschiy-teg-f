@@ -38,26 +38,4 @@
     /*переменные heart*/
     --contour-color: #000000;
    --sparks-color-zero: rgb(255, 0, 0); 
-
-
-} 
-
-/*
-@media (prefers-color-scheme: dark) {
-:root {
-    --main-font-weight: 465;
-    --accent-font-weight: 785;
-    --main-text-color:#00CC14;
-    --background-color: #000000;
-    --background-gradient: repeating-linear-gradient(to right, #007f0c 0px 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, #007f0c 0px 2px, transparent 2px 4px);
-    --background-gradient-deep-color: linear-gradient(to bottom, #007f0c 0%, #004306 100%);
-    --section-background: black;
-    --border: #00CC14;
 }
-}
-
-
-
-
-@media (prefers-color-scheme: dark) {}
-*/
