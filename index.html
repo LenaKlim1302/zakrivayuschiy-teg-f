@@ -264,7 +264,7 @@
            class="button-save" 
            aria-controls="dialog" aria-label="Сохранить на память">
           <svg  viewBox="0 0 21 21" class="floopy-main">
-            <use href="/svg/floppy.svg#floopy">
+            <use href="/svg/floppy.svg#floopy"></use>
           </svg>
           <span class="button__overlay"></span>
             <span class="button__text" >Сохранить на память</span>
@@ -274,13 +274,15 @@
       <!--Dialog-->
 
       <dialog class="custom-dialog" id="dialog" >
+        <form method="dialog">
         <div class="icon-title-dialog">
           <svg  viewBox="0 0 39 39" class="floopy-dialog">
-            <use href="/svg/floppy.svg#floopy" >
+            <use href="/svg/floppy.svg#floopy"></use>
           </svg>
           <h2 class="dialog-text">Вставьте дискету, чтобы продолжить</h2>
         </div>
           <button class="confirm">ок</button>
+          </form>
       </dialog>
 
 

@@ -132,11 +132,9 @@ header {
     opacity: 0.6;
     pointer-events: none;
     transition: 0.3s ease;
-}
-
-.theme-menu__button:disabled::after {
     animation: triangleAnimation 0.5s ease-in-out infinite alternate;
 }
+
 
 /*форма подчеркивания*/
 .button-underline::after {
@@ -152,7 +150,6 @@ header {
 .button-underline:hover::after {
     width: 100%;
     background-color: var(--header-button-disabled);
-    transition: width 300ms, background-color 0.3s;
     transition: 0.3s ease;
 }
 /*цвет текста */
@@ -422,13 +419,6 @@ header {
     fill: red;
     cursor: pointer;
     transition: fill 0.3s ease 0.05s;
-}
-
-.heart-button:active .core {
-    transition: fill 0.3s ease 0.03s;
-}
-.heart-button:active .main-body {
-    transition: fill 0.3s ease;
 }
 
 .like-icon.is-liked .core {
