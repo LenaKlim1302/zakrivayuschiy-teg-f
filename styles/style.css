@@ -288,11 +288,9 @@ main {
 
 .card__icon-button {
     display: flex;
-    width: 100%;
     height: fit-content;
     justify-content: flex-end;
-    margin-block-start: 25px;
-    padding: 0 25px 25px 0;
+    margin: 25px 25px 25px 0;
     gap: 5px;
 }
 
