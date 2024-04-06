@@ -13,7 +13,6 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
-
 body,
 html {
     display: flex;
@@ -104,8 +103,8 @@ header {
     position: relative;
     background-color: transparent;
     border: none;
-    transition: 0.3s ease;
     text-transform: uppercase;
+    transition: 0.3s ease;
 }
 
 .theme-menu__button::after {
@@ -115,12 +114,6 @@ header {
     right: 0;
     width: 100%;
     height: 100%;
-}
-
-.theme-menu__button:disabled {
-    color: var(--main-text-color);
-    opacity: 0.6;
-    pointer-events: none;
 }
 
 .theme-menu__button:disabled::after {
@@ -133,6 +126,12 @@ header {
     animation: triangleAnimation 0.5s ease-in-out infinite alternate;
 }
 
+.theme-menu__button:disabled {
+    color: var(--main-text-color);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
 .theme-menu__button::before {
     content: "";
     position: absolute;
@@ -140,29 +139,19 @@ header {
     left: 0;
     transform: scaleX(0);
     transform-origin: left;
+    transition: 0.3s ease;
 }
 
-.theme-menu__button:not(:disabled):hover::before {
-    height: 2px;
-    width: 100%;
-    background-color: var(--main-text-color);
-    color: var(--main-text-color);
-    opacity: 0.6;
-    transform: scaleX(1);
-    transition: transform 0.3s ease;
-}
-
+.theme-menu__button:not(:disabled):focus::before,
 .theme-menu__button:focus-visible::before {
     height: 2px;
     width: 100%;
     background-color: var(--main-text-color);
     opacity: 0.6;
     transform: scaleX(1);
-    transition: transform 0.3s ease;
 }
 
 .theme-menu__button:hover {
-    color: var(--main-text-color);
     opacity: 0.6;
 }
 
@@ -316,9 +305,11 @@ main {
     mix-blend-mode: difference;
 }
 
-.card__like-button::after,
-.button-save::after,
-.confirm::after {
+.main-button {
+    transition: 0.3s ease;
+}
+
+.main-button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -328,22 +319,25 @@ main {
     transform: scaleX(0);
     transform-origin: left;
     z-index: 1;
+    background-color: var(--border);
+    transition: 0.5s ease-in-out;
 }
 
-.card__like-button:hover::after,
-.button-save:hover::after,
-.confirm:hover::after {
+.main-button:hover::after {
     transform: scaleX(1);
-    transition: transform 0.5s ease-in-out;
     background-color: var(--border);
 }
 
-.card__like-button:focus,
-.button-save:focus,
-.confirm:focus {
+.main-button:focus {
     outline: none;
+}
+
+.main-button:focus::after {
+    outline: none;
+}
+
+.main-button:focus-visible {
     box-shadow: 2px 2px 0 var(--border);
-    transition: 0.3s ease;
 }
 
 .heart-button {
@@ -373,70 +367,32 @@ main {
     gap: 0;
 }
 
-.heart-button .core {
-    fill: transparent;
-}
-
+.heart-button .core,
 .heart-button .main-body {
     fill: transparent;
 }
 
-.heart-button:hover .core {
-    fill: var(--border);
-    cursor: pointer;
-    transition: fill 0.3s ease;
-}
+.heart-button:hover .core,
 .heart-button:hover .main-body {
     fill: var(--border);
     cursor: pointer;
-    transition: fill 0.3s ease 0.05s;
 }
 
-.heart-button:not(:hover) .core {
-    transition: fill 0.3s ease 0.03s;
-}
-.heart-button:not(:hover) .main-body {
-    transition: fill 0.3s ease;
-}
-
-.heart-button:active .core {
-    fill: red;
-    cursor: pointer;
-    transition: fill 0.3s ease;
-}
-
+.heart-button:active .core,
 .heart-button:active .main-body {
     fill: red;
     cursor: pointer;
-    transition: fill 0.3s ease 0.05s;
 }
 
-.like-icon.is-liked .core {
-    fill: red;
-    transition: fill 0.3s ease;
-}
-
+.like-icon.is-liked .contour,
+.like-icon.is-liked .sparks,
+.like-icon.is-liked .core,
 .like-icon.is-liked .main-body {
     fill: red;
-    transition: fill 0.3s ease 0.05s;
-}
-
-.like-icon.is-liked .contour {
-    fill: red;
-    transition: fill 0.3s ease 0.06s;
-}
-
-.like-icon.is-liked .heart {
-    animation: heart-scale 0.3s ease-in 0.1s 1 alternate both;
 }
 
 .sparks {
     fill: transparent;
-}
-
-.like-icon.is-liked .sparks {
-    fill: red;
-    animation: sparksAppearanceAnimation 0.3s ease-in 0.3s alternate both;
 }
 
 .section-save {
@@ -565,4 +521,5 @@ main {
     background-color: transparent;
     border: 2px solid var(--border);
     margin: 0;
+    text-transform: uppercase;
 }
